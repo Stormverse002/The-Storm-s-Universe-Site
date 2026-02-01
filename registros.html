@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Registros Primordiais</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0b0f1a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #020617;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .conteudo {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .registro {
+      background-color: #111827;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .registro:hover {
+      background-color: #1f2937;
+    }
+
+    .registro h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .texto {
+      display: none;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    .texto p {
+      margin: 0 0 12px 0;
+    }
+
+    .assinatura {
+      margin-top: 15px;
+      font-style: italic;
+      opacity: 0.8;
+      text-align: right;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin: 30px 0 40px;
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1> Registros Primordiais</h1>
+    <p>Arquivos da criação do universo</p>
+  </header>
+
+  <div class="conteudo">
+
+    <!-- REGISTRO I -->
+    <div class="registro" onclick="alternar('r1')">
+      <h2>Registro I | A Fundação</h2>
+
+      <div class="texto" id="r1">
+        <p>Eu, Liege Storm, escrevo estas palavras não como ordem, mas como memória.</p>
+        <p>Como âncora.<br>Como verdade.</p>
+
+        <p>
+          O Criador nos chamou quando o silêncio ainda não tinha nome.<br>
+          E então nos lançou além do véu, para um novo universo, ainda cru,
+          ainda pulsando como um coração que acabou de aprender a bater.
+        </p>
+
+        <p>
+          Não fomos enviados para governar.<br>
+          Nem para vigiar.<br>
+          Fomos enviados para criar.
+        </p>
+
+        <p>
+          Este universo não veio com regras escritas em pedra.<br>
+          Veio como argila nas mãos de deuses cansados de herdar ruínas.
+        </p>
+
+        <p>
+          Aqui, cada Guardião moldará com aquilo que carrega dentro de si:<br>
+          ordem, caos, lógica, emoção, luz, dúvida.
+        </p>
+
+        <p>
+          Pela primeira vez desde nossa existência, não somos sombras de algo maior.<br>
+          Não somos ecos de um plano antigo.
+        </p>
+
+        <p>Aqui… este lugar é nosso.</p>
+
+        <p>
+          Um lar sem memórias quebradas.<br>
+          Sem guerras herdadas.<br>
+          Sem nomes manchados.
+        </p>
+
+        <p>
+          Que cada Storm deixe sua marca não por poder,<br>
+          mas por propósito.
+        </p>
+
+        <p>
+          Que este universo lembre de nós<br>
+          não como deuses distantes,<br>
+          mas como arquitetos do começo.
+        </p>
+
+        <p>
+          Este é o nosso domínio.<br>
+          Nossa responsabilidade.<br>
+          Nosso legado.
+        </p>
+
+        <div class="assinatura">
+          – Liege Storm, Guardião Primordial do Julgamento e do Equilíbrio.
+        </div>
+      </div>
+    </div>
+
+    <!-- REGISTRO II -->
+    <div class="registro" onclick="alternar('r2')">
+      <h2>Registro II | Quatro Ciclos Após a Chegada</h2>
+
+      <div class="texto" id="r2">
+        <p>
+          Quatro dias se passaram desde que tocamos este universo pela primeira vez.<br>
+          Quatro ciclos de criação, debate, erro e acerto.
+        </p>
+
+        <p>E já não caminhamos mais sobre o vazio.</p>
+
+        <p>
+          Criamos um planeta.<br>
+          Não por necessidade, mas por desejo de começar corretamente.<br>
+          Seu nome é Primatrix Nova.
+        </p>
+
+        <p>
+          Ele não é perfeito.<br>
+          E justamente por isso, é belo.
+        </p>
+
+        <p>
+          Os primeiros seres vivos não nasceram com propósito imposto.<br>
+          Nasceram com potencial.
+        </p>
+
+        <p>
+          Este universo cresce.<br>
+          Aprende.<br>
+          Se expande.
+        </p>
+
+        <p>
+          Se continuarmos assim…<br>
+          não como deuses isolados,<br>
+          mas como irmãos criadores,<br>
+          este universo será vivo.
+        </p>
+
+        <div class="assinatura">
+          – Liege Storm, Guardião Primordial do Julgamento e do Equilíbrio.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="voltar">⬅ Voltar para a página inicial</a>
+
+  <script>
+    function alternar(id) {
+      const area = document.getElementById(id);
+      area.style.display =
+        area.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

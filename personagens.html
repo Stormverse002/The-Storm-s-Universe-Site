@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Arquivos de Personagens – Hyper Storm</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0b0f1a;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #020617;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .conteudo {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Categorias */
+    .categoria {
+      background-color: #111827;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .categoria:hover {
+      background-color: #1f2937;
+    }
+
+    .categoria h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    /* Área expansível */
+    .lista {
+      display: none;
+      margin-top: 15px;
+    }
+
+    /* Personagem */
+    .personagem {
+      background-color: #020617;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+
+    .personagem h3 {
+      margin: 0 0 6px 0;
+      font-size: 16px;
+    }
+
+    .personagem p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin: 30px 0 40px;
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPO -->
+  <header>
+    <h1> Arquivos de Personagens</h1>
+    <p>Classificação oficial da OPM</p>
+  </header>
+
+  <div class="conteudo">
+
+    <!-- HERÓIS -->
+    <div class="categoria" onclick="alternar('herois')">
+      <h2> Heróis</h2>
+
+      <div class="lista" id="herois">
+
+        <div class="personagem">
+          <h3>Hyper Storm</h3>
+          <p>
+            Portador da Luz Primordial. O principal defensor do multiverso
+            contra ameaças cósmicas e existenciais.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Iron Bee</h3>
+          <p>
+            Combatente de elite equipada com tecnologia avançada e lâminas
+            de energia. Especialista em combate tático.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Iron Bat</h3>
+          <p>
+            Vigilante urbano altamente treinado, focado em estratégia,
+            furtividade e combate direto.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Golden Reaper</h3>
+          <p>
+            Entidade envolta em mistério, ligada a forças celestiais e
+            julgamentos além da compreensão humana.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ANTI-HERÓIS -->
+    <div class="categoria" onclick="alternar('antiherois')">
+      <h2> Anti-Heróis</h2>
+
+      <div class="lista" id="antiherois">
+        <div class="personagem">
+          <h3>Nenhum registro encontrado</h3>
+          <p>
+            Atualmente, não há anti-heróis catalogados nos arquivos da OPM. Por enquanto...
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VILÕES -->
+    <div class="categoria" onclick="alternar('viloes')">
+      <h2> Vilões</h2>
+
+      <div class="lista" id="viloes">
+
+        <div class="personagem">
+          <h3>Stormtron</h3>
+          <p>
+            A metade corrompida de Hyper Storm, portador da Escuridão
+            Primordial e líder da Ordem da Calamidade.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Storm Chaser</h3>
+          <p>
+            Estrategista implacável, humano sem poderes, movido por obsessão
+            e vingança.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Dark Lance</h3>
+          <p>
+            Combatente altamente treinado, parceiro de Storm Chaser e
+            executor de missões críticas.
+          </p>
+        </div>
+
+        <div class="personagem">
+          <h3>Jester</h3>
+          <p>
+            Um agente do caos. Imprevisível, cruel e perigosamente
+            inteligente.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="voltar">⬅ Voltar para a página inicial</a>
+
+  <script>
+    function alternar(id) {
+      const lista = document.getElementById(id);
+      lista.style.display =
+        lista.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
